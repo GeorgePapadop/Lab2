@@ -103,7 +103,6 @@ definitions:
         type: "string"
       grades:
         type: "object"
-        properties: {}
     example:
       student_id: 0
       last_name: "last_name"
