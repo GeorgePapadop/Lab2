@@ -25,13 +25,13 @@ def add_student(student):
     if res:
         return 'already exists', 409
 
-    doc_id = student_db.insert(student.to_dict())
-    student.student_id = doc_id
-
     if student.first_name == None:
         return 'method not allowed', 405
     if student.last_name == None:
         return 'method not allowed', 405
+
+    doc_id = student_db.insert(student.to_dict())
+    student.student_id = doc_id
 
     return student.student_id
 
